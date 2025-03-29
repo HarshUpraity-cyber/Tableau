@@ -1,0 +1,1752 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20243.25.0114.1153                               -->
+<workbook original-version='18.1' source-build='2024.3.3 (20243.25.0114.1153)' source-platform='win' version='18.1' xml:base='https://public.tableau.com' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AnimationOnByDefault />
+    <MapboxVectorStylesAndLayers />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <repository-location id='Assignment3_17401194640810' path='/workbooks' revision='1.0' />
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource hasconnection='false' inline='true' name='Parameters' version='18.1'>
+      <aliases enabled='yes' />
+      <column caption='Undergrad Residence' datatype='string' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;\% unknown&quot;'>
+        <calculation class='tableau' formula='&quot;% unknown&quot;' />
+        <members>
+          <member value='&quot;\%foreign&quot;' />
+          <member value='&quot;\%in state&quot;' />
+          <member value='&quot;\%out of state&quot;' />
+          <member value='&quot;\% unknown&quot;' />
+        </members>
+      </column>
+    </datasource>
+    <datasource caption='ipeds (ipeds2022)' inline='true' name='federated.01x27ky0abclh31213yvj06585e4' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='ipeds2022' name='excel-direct.0o24owc1w1v00x17wsp6l02d8f55'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='D:/Std/Tableau/ipeds2022.xlsx' interpretationMode='0' password='' server='' validate='no' workgroup-auth-mode='as-is' />
+          </named-connection>
+        </named-connections>
+        <relation connection='excel-direct.0o24owc1w1v00x17wsp6l02d8f55' name='ipeds' table='[ipeds$]' type='table'>
+          <columns gridOrigin='A1:AP6226:no:A1:AP6226:0' header='yes' outcome='2'>
+            <column datatype='integer' name='ID' ordinal='0' />
+            <column datatype='string' name='institution name' ordinal='1' />
+            <column datatype='string' name='Street address' ordinal='2' />
+            <column datatype='string' name='City' ordinal='3' />
+            <column datatype='string' name='State' ordinal='4' />
+            <column datatype='string' name='ZIP code' ordinal='5' />
+            <column datatype='string' name='Website' ordinal='6' />
+            <column datatype='real' name='Longitude' ordinal='7' />
+            <column datatype='real' name='Latitude' ordinal='8' />
+            <column datatype='integer' name='Percent admitted - total' ordinal='9' />
+            <column datatype='integer' name='Percent admitted - men' ordinal='10' />
+            <column datatype='integer' name='Percent admitted - women' ordinal='11' />
+            <column datatype='integer' name='Tuition and fees' ordinal='12' />
+            <column datatype='string' name='Control of institution' ordinal='13' />
+            <column datatype='string' name='Historically Black College or University' ordinal='14' />
+            <column datatype='string' name='Tribal college' ordinal='15' />
+            <column datatype='string' name='Land Grant Institution' ordinal='16' />
+            <column datatype='string' name='Carnegie Classification' ordinal='17' />
+            <column datatype='integer' name='Enrollment - Total' ordinal='18' />
+            <column datatype='integer' name='Enrollment - Undergraduate' ordinal='19' />
+            <column datatype='integer' name='Enrollment - Graduate' ordinal='20' />
+            <column datatype='integer' name='Percent American Indian or Alaska Native' ordinal='21' />
+            <column datatype='integer' name='Percent Asian' ordinal='22' />
+            <column datatype='integer' name='Percent Black or African American' ordinal='23' />
+            <column datatype='integer' name='Percent Hispanic/Latino' ordinal='24' />
+            <column datatype='integer' name='Percent Native Hawaiian or Other Pacific Islander' ordinal='25' />
+            <column datatype='integer' name='Percent White' ordinal='26' />
+            <column datatype='integer' name='Percent Two or more races' ordinal='27' />
+            <column datatype='integer' name='Percent Race/ethnicity unknown' ordinal='28' />
+            <column datatype='integer' name='Percent - US Nonresident' ordinal='29' />
+            <column datatype='integer' name='Percent Asian/Native Hawaiian/Pacific Islander' ordinal='30' />
+            <column datatype='integer' name='Percent - women' ordinal='31' />
+            <column datatype='integer' name='Student-to-faculty ratio' ordinal='32' />
+            <column datatype='integer' name='Percent of first-time undergraduates - in-state' ordinal='33' />
+            <column datatype='integer' name='Percent of first-time undergraduates - out-of-state' ordinal='34' />
+            <column datatype='integer' name='Percent of first-time undergraduates - international' ordinal='35' />
+            <column datatype='integer' name='Percent of first-time undergraduates - residence unknown' ordinal='36' />
+            <column datatype='integer' name='Number of students receiving an Associate&apos;s degree' ordinal='37' />
+            <column datatype='integer' name='Number of students receiving a Bachelor&apos;s degree' ordinal='38' />
+            <column datatype='integer' name='Number of students receiving a Master&apos;s degree' ordinal='39' />
+            <column datatype='integer' name='Number of students receiving a Doctor&apos;s degree' ordinal='40' />
+            <column datatype='integer' name='Graduation rate, total cohort' ordinal='41' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[ipeds]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:AP6226:no:A1:AP6226:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>2</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ID</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[ID]</local-name>
+            <parent-name>[ipeds]</parent-name>
+            <remote-alias>ID</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[ipeds_BB6B7BF8E99A492799E3B92820458FA0]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>institution name</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[institution name]</local-name>
+            <parent-name>[ipeds]</parent-name>
+            <remote-alias>institution name</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[ipeds_BB6B7BF8E99A492799E3B92820458FA0]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Street address</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Street address]</local-name>
+            <parent-name>[ipeds]</parent-name>
+            <remote-alias>Street address</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[ipeds_BB6B7BF8E99A492799E3B92820458FA0]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>City</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[City]</local-name>
+            <parent-name>[ipeds]</parent-name>
+            <remote-alias>City</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[ipeds_BB6B7BF8E99A492799E3B92820458FA0]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>State</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[State]</local-name>
+            <parent-name>[ipeds]</parent-name>
+            <remote-alias>State</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[ipeds_BB6B7BF8E99A492799E3B92820458FA0]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ZIP code</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[ZIP code]</local-name>
+            <parent-name>[ipeds]</parent-name>
+            <remote-alias>ZIP code</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[ipeds_BB6B7BF8E99A492799E3B92820458FA0]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Website</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Website]</local-name>
+            <parent-name>[ipeds]</parent-name>
+            <remote-alias>Website</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[ipeds_BB6B7BF8E99A492799E3B92820458FA0]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Longitude</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Longitude]</local-name>
+            <parent-name>[ipeds]</parent-name>
+            <remote-alias>Longitude</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[ipeds_BB6B7BF8E99A492799E3B92820458FA0]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Latitude</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Latitude]</local-name>
+            <parent-name>[ipeds]</parent-name>
+            <remote-alias>Latitude</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[ipeds_BB6B7BF8E99A492799E3B92820458FA0]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Percent admitted - total</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Percent admitted - total]</local-name>
+            <parent-name>[ipeds]</parent-name>
+            <remote-alias>Percent admitted - total</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[ipeds_BB6B7BF8E99A492799E3B92820458FA0]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Percent admitted - men</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Percent admitted - men]</local-name>
+            <parent-name>[ipeds]</parent-name>
+            <remote-alias>Percent admitted - men</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[ipeds_BB6B7BF8E99A492799E3B92820458FA0]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Percent admitted - women</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Percent admitted - women]</local-name>
+            <parent-name>[ipeds]</parent-name>
+            <remote-alias>Percent admitted - women</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[ipeds_BB6B7BF8E99A492799E3B92820458FA0]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Tuition and fees</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Tuition and fees]</local-name>
+            <parent-name>[ipeds]</parent-name>
+            <remote-alias>Tuition and fees</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[ipeds_BB6B7BF8E99A492799E3B92820458FA0]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Control of institution</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Control of institution]</local-name>
+            <parent-name>[ipeds]</parent-name>
+            <remote-alias>Control of institution</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[ipeds_BB6B7BF8E99A492799E3B92820458FA0]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Historically Black College or University</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Historically Black College or University]</local-name>
+            <parent-name>[ipeds]</parent-name>
+            <remote-alias>Historically Black College or University</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[ipeds_BB6B7BF8E99A492799E3B92820458FA0]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Tribal college</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Tribal college]</local-name>
+            <parent-name>[ipeds]</parent-name>
+            <remote-alias>Tribal college</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[ipeds_BB6B7BF8E99A492799E3B92820458FA0]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Land Grant Institution</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Land Grant Institution]</local-name>
+            <parent-name>[ipeds]</parent-name>
+            <remote-alias>Land Grant Institution</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[ipeds_BB6B7BF8E99A492799E3B92820458FA0]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Carnegie Classification</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Carnegie Classification]</local-name>
+            <parent-name>[ipeds]</parent-name>
+            <remote-alias>Carnegie Classification</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[ipeds_BB6B7BF8E99A492799E3B92820458FA0]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Enrollment - Total</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Enrollment - Total]</local-name>
+            <parent-name>[ipeds]</parent-name>
+            <remote-alias>Enrollment - Total</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[ipeds_BB6B7BF8E99A492799E3B92820458FA0]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Enrollment - Undergraduate</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Enrollment - Undergraduate]</local-name>
+            <parent-name>[ipeds]</parent-name>
+            <remote-alias>Enrollment - Undergraduate</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[ipeds_BB6B7BF8E99A492799E3B92820458FA0]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Enrollment - Graduate</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Enrollment - Graduate]</local-name>
+            <parent-name>[ipeds]</parent-name>
+            <remote-alias>Enrollment - Graduate</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[ipeds_BB6B7BF8E99A492799E3B92820458FA0]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Percent American Indian or Alaska Native</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Percent American Indian or Alaska Native]</local-name>
+            <parent-name>[ipeds]</parent-name>
+            <remote-alias>Percent American Indian or Alaska Native</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[ipeds_BB6B7BF8E99A492799E3B92820458FA0]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Percent Asian</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Percent Asian]</local-name>
+            <parent-name>[ipeds]</parent-name>
+            <remote-alias>Percent Asian</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[ipeds_BB6B7BF8E99A492799E3B92820458FA0]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Percent Black or African American</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Percent Black or African American]</local-name>
+            <parent-name>[ipeds]</parent-name>
+            <remote-alias>Percent Black or African American</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[ipeds_BB6B7BF8E99A492799E3B92820458FA0]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Percent Hispanic/Latino</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Percent Hispanic/Latino]</local-name>
+            <parent-name>[ipeds]</parent-name>
+            <remote-alias>Percent Hispanic/Latino</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[ipeds_BB6B7BF8E99A492799E3B92820458FA0]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Percent Native Hawaiian or Other Pacific Islander</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Percent Native Hawaiian or Other Pacific Islander]</local-name>
+            <parent-name>[ipeds]</parent-name>
+            <remote-alias>Percent Native Hawaiian or Other Pacific Islander</remote-alias>
+            <ordinal>25</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[ipeds_BB6B7BF8E99A492799E3B92820458FA0]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Percent White</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Percent White]</local-name>
+            <parent-name>[ipeds]</parent-name>
+            <remote-alias>Percent White</remote-alias>
+            <ordinal>26</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[ipeds_BB6B7BF8E99A492799E3B92820458FA0]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Percent Two or more races</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Percent Two or more races]</local-name>
+            <parent-name>[ipeds]</parent-name>
+            <remote-alias>Percent Two or more races</remote-alias>
+            <ordinal>27</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[ipeds_BB6B7BF8E99A492799E3B92820458FA0]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Percent Race/ethnicity unknown</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Percent Race/ethnicity unknown]</local-name>
+            <parent-name>[ipeds]</parent-name>
+            <remote-alias>Percent Race/ethnicity unknown</remote-alias>
+            <ordinal>28</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[ipeds_BB6B7BF8E99A492799E3B92820458FA0]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Percent - US Nonresident</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Percent - US Nonresident]</local-name>
+            <parent-name>[ipeds]</parent-name>
+            <remote-alias>Percent - US Nonresident</remote-alias>
+            <ordinal>29</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[ipeds_BB6B7BF8E99A492799E3B92820458FA0]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Percent Asian/Native Hawaiian/Pacific Islander</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Percent Asian/Native Hawaiian/Pacific Islander]</local-name>
+            <parent-name>[ipeds]</parent-name>
+            <remote-alias>Percent Asian/Native Hawaiian/Pacific Islander</remote-alias>
+            <ordinal>30</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[ipeds_BB6B7BF8E99A492799E3B92820458FA0]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Percent - women</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Percent - women]</local-name>
+            <parent-name>[ipeds]</parent-name>
+            <remote-alias>Percent - women</remote-alias>
+            <ordinal>31</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[ipeds_BB6B7BF8E99A492799E3B92820458FA0]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Student-to-faculty ratio</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Student-to-faculty ratio]</local-name>
+            <parent-name>[ipeds]</parent-name>
+            <remote-alias>Student-to-faculty ratio</remote-alias>
+            <ordinal>32</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[ipeds_BB6B7BF8E99A492799E3B92820458FA0]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Percent of first-time undergraduates - in-state</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Percent of first-time undergraduates - in-state]</local-name>
+            <parent-name>[ipeds]</parent-name>
+            <remote-alias>Percent of first-time undergraduates - in-state</remote-alias>
+            <ordinal>33</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[ipeds_BB6B7BF8E99A492799E3B92820458FA0]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Percent of first-time undergraduates - out-of-state</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Percent of first-time undergraduates - out-of-state]</local-name>
+            <parent-name>[ipeds]</parent-name>
+            <remote-alias>Percent of first-time undergraduates - out-of-state</remote-alias>
+            <ordinal>34</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[ipeds_BB6B7BF8E99A492799E3B92820458FA0]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Percent of first-time undergraduates - international</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Percent of first-time undergraduates - international]</local-name>
+            <parent-name>[ipeds]</parent-name>
+            <remote-alias>Percent of first-time undergraduates - international</remote-alias>
+            <ordinal>35</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[ipeds_BB6B7BF8E99A492799E3B92820458FA0]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Percent of first-time undergraduates - residence unknown</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Percent of first-time undergraduates - residence unknown]</local-name>
+            <parent-name>[ipeds]</parent-name>
+            <remote-alias>Percent of first-time undergraduates - residence unknown</remote-alias>
+            <ordinal>36</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[ipeds_BB6B7BF8E99A492799E3B92820458FA0]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Number of students receiving an Associate&apos;s degree</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Number of students receiving an Associate&apos;s degree]</local-name>
+            <parent-name>[ipeds]</parent-name>
+            <remote-alias>Number of students receiving an Associate&apos;s degree</remote-alias>
+            <ordinal>37</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[ipeds_BB6B7BF8E99A492799E3B92820458FA0]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Number of students receiving a Bachelor&apos;s degree</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Number of students receiving a Bachelor&apos;s degree]</local-name>
+            <parent-name>[ipeds]</parent-name>
+            <remote-alias>Number of students receiving a Bachelor&apos;s degree</remote-alias>
+            <ordinal>38</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[ipeds_BB6B7BF8E99A492799E3B92820458FA0]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Number of students receiving a Master&apos;s degree</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Number of students receiving a Master&apos;s degree]</local-name>
+            <parent-name>[ipeds]</parent-name>
+            <remote-alias>Number of students receiving a Master&apos;s degree</remote-alias>
+            <ordinal>39</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[ipeds_BB6B7BF8E99A492799E3B92820458FA0]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Number of students receiving a Doctor&apos;s degree</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Number of students receiving a Doctor&apos;s degree]</local-name>
+            <parent-name>[ipeds]</parent-name>
+            <remote-alias>Number of students receiving a Doctor&apos;s degree</remote-alias>
+            <ordinal>40</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[ipeds_BB6B7BF8E99A492799E3B92820458FA0]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Graduation rate, total cohort</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Graduation rate, total cohort]</local-name>
+            <parent-name>[ipeds]</parent-name>
+            <remote-alias>Graduation rate, total cohort</remote-alias>
+            <ordinal>41</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[ipeds_BB6B7BF8E99A492799E3B92820458FA0]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Undergrad Residence' datatype='real' name='[Calculation_1075234460462960641]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='CASE[Calculation_1075234460462960641]&#13;&#10;WHEN &apos;% foreign&apos; THEN [Percent of first-time undergraduates - international]&#13;&#10;WHEN &apos;% in state&apos; THEN [Percent of first-time undergraduates - in-state]&#13;&#10;WHEN &apos;% out of state&apos; THEN [Percent of first-time undergraduates - out-of-state]&#13;&#10;WHEN &apos;% unknown&apos; THEN [Percent of first-time undergraduates - residence unknown]&#13;&#10;END' />
+      </column>
+      <column datatype='string' name='[City]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+      <column datatype='integer' name='[ID]' role='dimension' type='ordinal' />
+      <column aggregation='Avg' datatype='real' name='[Latitude]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+      <column aggregation='Avg' datatype='real' name='[Longitude]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative' />
+      <column datatype='integer' name='[Percent admitted - total]' role='measure' type='quantitative' />
+      <column datatype='string' name='[State]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+      <column datatype='string' name='[ZIP code]' role='dimension' semantic-role='[ZipCode].[Name]' type='nominal' />
+      <column caption='ipeds' datatype='table' name='[__tableau_internal_object_id__].[ipeds_BB6B7BF8E99A492799E3B92820458FA0]' role='measure' type='quantitative' />
+      <column caption='Institution Name' datatype='string' name='[institution name]' role='dimension' type='nominal' />
+      <column-instance column='[Competitiveness]' derivation='InOut' name='[io:Competitiveness:nk]' pivot='key' type='nominal'>
+        <aliases>
+          <alias key='false' value='Non Competitive' />
+          <alias key='true' value='Competitive' />
+        </aliases>
+      </column-instance>
+      <group caption='Competitiveness' name='[Competitiveness]' name-style='unqualified' user:ui-builder='filter-group'>
+        <groupfilter expression='SUM([Percent admitted - total]) &lt;= 40' function='filter' user:ui-filter-by-field='true' user:ui-marker='filter-by'>
+          <groupfilter function='level-members' level='[ID]' user:ui-manual-selection='true' user:ui-manual-selection-all-when-empty='true' user:ui-manual-selection-is-empty='true' user:ui-marker='enumerate' />
+        </groupfilter>
+      </group>
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='C:/Users/hu374/AppData/Local/Temp/TableauTemp/#TableauTemp_1f4ix740hcjel118qsl0l0amkzlf.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='02/21/2025 06:23:39 AM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>ID</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[ID]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>ID</remote-alias>
+              <ordinal>0</ordinal>
+              <family>ipeds</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>6225</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[ipeds_BB6B7BF8E99A492799E3B92820458FA0]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>institution name</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[institution name]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>institution name</remote-alias>
+              <ordinal>1</ordinal>
+              <family>ipeds</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>5789</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <object-id>[ipeds_BB6B7BF8E99A492799E3B92820458FA0]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Street address</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Street address]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Street address</remote-alias>
+              <ordinal>2</ordinal>
+              <family>ipeds</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>5789</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <object-id>[ipeds_BB6B7BF8E99A492799E3B92820458FA0]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>City</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[City]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>City</remote-alias>
+              <ordinal>3</ordinal>
+              <family>ipeds</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1425</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <object-id>[ipeds_BB6B7BF8E99A492799E3B92820458FA0]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>State</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[State]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>State</remote-alias>
+              <ordinal>4</ordinal>
+              <family>ipeds</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>58</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <object-id>[ipeds_BB6B7BF8E99A492799E3B92820458FA0]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>ZIP code</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[ZIP code]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>ZIP code</remote-alias>
+              <ordinal>5</ordinal>
+              <family>ipeds</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3289</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <object-id>[ipeds_BB6B7BF8E99A492799E3B92820458FA0]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Website</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Website]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Website</remote-alias>
+              <ordinal>6</ordinal>
+              <family>ipeds</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3248</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <object-id>[ipeds_BB6B7BF8E99A492799E3B92820458FA0]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Longitude</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Longitude]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Longitude</remote-alias>
+              <ordinal>7</ordinal>
+              <family>ipeds</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>5789</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[ipeds_BB6B7BF8E99A492799E3B92820458FA0]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Latitude</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Latitude]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Latitude</remote-alias>
+              <ordinal>8</ordinal>
+              <family>ipeds</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>5789</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[ipeds_BB6B7BF8E99A492799E3B92820458FA0]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Percent admitted - total</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Percent admitted - total]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Percent admitted - total</remote-alias>
+              <ordinal>9</ordinal>
+              <family>ipeds</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>104</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[ipeds_BB6B7BF8E99A492799E3B92820458FA0]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Percent admitted - men</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Percent admitted - men]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Percent admitted - men</remote-alias>
+              <ordinal>10</ordinal>
+              <family>ipeds</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>109</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[ipeds_BB6B7BF8E99A492799E3B92820458FA0]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Percent admitted - women</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Percent admitted - women]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Percent admitted - women</remote-alias>
+              <ordinal>11</ordinal>
+              <family>ipeds</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>123</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[ipeds_BB6B7BF8E99A492799E3B92820458FA0]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Tuition and fees</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Tuition and fees]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Tuition and fees</remote-alias>
+              <ordinal>12</ordinal>
+              <family>ipeds</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1736</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[ipeds_BB6B7BF8E99A492799E3B92820458FA0]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Control of institution</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Control of institution]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Control of institution</remote-alias>
+              <ordinal>13</ordinal>
+              <family>ipeds</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <object-id>[ipeds_BB6B7BF8E99A492799E3B92820458FA0]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Historically Black College or University</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Historically Black College or University]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Historically Black College or University</remote-alias>
+              <ordinal>14</ordinal>
+              <family>ipeds</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <object-id>[ipeds_BB6B7BF8E99A492799E3B92820458FA0]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Tribal college</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Tribal college]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Tribal college</remote-alias>
+              <ordinal>15</ordinal>
+              <family>ipeds</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <object-id>[ipeds_BB6B7BF8E99A492799E3B92820458FA0]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Land Grant Institution</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Land Grant Institution]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Land Grant Institution</remote-alias>
+              <ordinal>16</ordinal>
+              <family>ipeds</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <object-id>[ipeds_BB6B7BF8E99A492799E3B92820458FA0]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Carnegie Classification</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Carnegie Classification]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Carnegie Classification</remote-alias>
+              <ordinal>17</ordinal>
+              <family>ipeds</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>35</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <object-id>[ipeds_BB6B7BF8E99A492799E3B92820458FA0]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Enrollment - Total</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Enrollment - Total]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Enrollment - Total</remote-alias>
+              <ordinal>18</ordinal>
+              <family>ipeds</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1750</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[ipeds_BB6B7BF8E99A492799E3B92820458FA0]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Enrollment - Undergraduate</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Enrollment - Undergraduate]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Enrollment - Undergraduate</remote-alias>
+              <ordinal>19</ordinal>
+              <family>ipeds</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1675</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[ipeds_BB6B7BF8E99A492799E3B92820458FA0]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Enrollment - Graduate</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Enrollment - Graduate]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Enrollment - Graduate</remote-alias>
+              <ordinal>20</ordinal>
+              <family>ipeds</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>878</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[ipeds_BB6B7BF8E99A492799E3B92820458FA0]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Percent American Indian or Alaska Native</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Percent American Indian or Alaska Native]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Percent American Indian or Alaska Native</remote-alias>
+              <ordinal>21</ordinal>
+              <family>ipeds</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>42</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[ipeds_BB6B7BF8E99A492799E3B92820458FA0]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Percent Asian</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Percent Asian]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Percent Asian</remote-alias>
+              <ordinal>22</ordinal>
+              <family>ipeds</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>58</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[ipeds_BB6B7BF8E99A492799E3B92820458FA0]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Percent Black or African American</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Percent Black or African American]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Percent Black or African American</remote-alias>
+              <ordinal>23</ordinal>
+              <family>ipeds</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>114</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[ipeds_BB6B7BF8E99A492799E3B92820458FA0]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Percent Hispanic/Latino</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Percent Hispanic/Latino]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Percent Hispanic/Latino</remote-alias>
+              <ordinal>24</ordinal>
+              <family>ipeds</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>112</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[ipeds_BB6B7BF8E99A492799E3B92820458FA0]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Percent Native Hawaiian or Other Pacific Islander</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Percent Native Hawaiian or Other Pacific Islander]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Percent Native Hawaiian or Other Pacific Islander</remote-alias>
+              <ordinal>25</ordinal>
+              <family>ipeds</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>13</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[ipeds_BB6B7BF8E99A492799E3B92820458FA0]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Percent White</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Percent White]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Percent White</remote-alias>
+              <ordinal>26</ordinal>
+              <family>ipeds</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>104</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[ipeds_BB6B7BF8E99A492799E3B92820458FA0]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Percent Two or more races</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Percent Two or more races]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Percent Two or more races</remote-alias>
+              <ordinal>27</ordinal>
+              <family>ipeds</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>26</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[ipeds_BB6B7BF8E99A492799E3B92820458FA0]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Percent Race/ethnicity unknown</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Percent Race/ethnicity unknown]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Percent Race/ethnicity unknown</remote-alias>
+              <ordinal>28</ordinal>
+              <family>ipeds</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>67</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[ipeds_BB6B7BF8E99A492799E3B92820458FA0]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Percent - US Nonresident</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Percent - US Nonresident]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Percent - US Nonresident</remote-alias>
+              <ordinal>29</ordinal>
+              <family>ipeds</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>65</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[ipeds_BB6B7BF8E99A492799E3B92820458FA0]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Percent Asian/Native Hawaiian/Pacific Islander</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Percent Asian/Native Hawaiian/Pacific Islander]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Percent Asian/Native Hawaiian/Pacific Islander</remote-alias>
+              <ordinal>30</ordinal>
+              <family>ipeds</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>60</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[ipeds_BB6B7BF8E99A492799E3B92820458FA0]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Percent - women</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Percent - women]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Percent - women</remote-alias>
+              <ordinal>31</ordinal>
+              <family>ipeds</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>112</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[ipeds_BB6B7BF8E99A492799E3B92820458FA0]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Student-to-faculty ratio</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Student-to-faculty ratio]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Student-to-faculty ratio</remote-alias>
+              <ordinal>32</ordinal>
+              <family>ipeds</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>48</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[ipeds_BB6B7BF8E99A492799E3B92820458FA0]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Percent of first-time undergraduates - in-state</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Percent of first-time undergraduates - in-state]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Percent of first-time undergraduates - in-state</remote-alias>
+              <ordinal>33</ordinal>
+              <family>ipeds</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>117</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[ipeds_BB6B7BF8E99A492799E3B92820458FA0]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Percent of first-time undergraduates - out-of-state</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Percent of first-time undergraduates - out-of-state]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Percent of first-time undergraduates - out-of-state</remote-alias>
+              <ordinal>34</ordinal>
+              <family>ipeds</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>101</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[ipeds_BB6B7BF8E99A492799E3B92820458FA0]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Percent of first-time undergraduates - international</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Percent of first-time undergraduates - international]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Percent of first-time undergraduates - international</remote-alias>
+              <ordinal>35</ordinal>
+              <family>ipeds</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>57</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[ipeds_BB6B7BF8E99A492799E3B92820458FA0]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Percent of first-time undergraduates - residence unknown</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Percent of first-time undergraduates - residence unknown]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Percent of first-time undergraduates - residence unknown</remote-alias>
+              <ordinal>36</ordinal>
+              <family>ipeds</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>41</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[ipeds_BB6B7BF8E99A492799E3B92820458FA0]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Number of students receiving an Associate&apos;s degree</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Number of students receiving an Associate&apos;s degree]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Number of students receiving an Associate&apos;s degree</remote-alias>
+              <ordinal>37</ordinal>
+              <family>ipeds</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>623</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[ipeds_BB6B7BF8E99A492799E3B92820458FA0]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Number of students receiving a Bachelor&apos;s degree</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Number of students receiving a Bachelor&apos;s degree]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Number of students receiving a Bachelor&apos;s degree</remote-alias>
+              <ordinal>38</ordinal>
+              <family>ipeds</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>869</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[ipeds_BB6B7BF8E99A492799E3B92820458FA0]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Number of students receiving a Master&apos;s degree</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Number of students receiving a Master&apos;s degree]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Number of students receiving a Master&apos;s degree</remote-alias>
+              <ordinal>39</ordinal>
+              <family>ipeds</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>590</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[ipeds_BB6B7BF8E99A492799E3B92820458FA0]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Number of students receiving a Doctor&apos;s degree</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Number of students receiving a Doctor&apos;s degree]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Number of students receiving a Doctor&apos;s degree</remote-alias>
+              <ordinal>40</ordinal>
+              <family>ipeds</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>308</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[ipeds_BB6B7BF8E99A492799E3B92820458FA0]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Graduation rate, total cohort</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Graduation rate, total cohort]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Graduation rate, total cohort</remote-alias>
+              <ordinal>41</ordinal>
+              <family>ipeds</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>107</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[ipeds_BB6B7BF8E99A492799E3B92820458FA0]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;India&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='ipeds' id='ipeds_BB6B7BF8E99A492799E3B92820458FA0'>
+            <properties context=''>
+              <relation connection='excel-direct.0o24owc1w1v00x17wsp6l02d8f55' name='ipeds' table='[ipeds$]' type='table'>
+                <columns gridOrigin='A1:AP6226:no:A1:AP6226:0' header='yes' outcome='2'>
+                  <column datatype='integer' name='ID' ordinal='0' />
+                  <column datatype='string' name='institution name' ordinal='1' />
+                  <column datatype='string' name='Street address' ordinal='2' />
+                  <column datatype='string' name='City' ordinal='3' />
+                  <column datatype='string' name='State' ordinal='4' />
+                  <column datatype='string' name='ZIP code' ordinal='5' />
+                  <column datatype='string' name='Website' ordinal='6' />
+                  <column datatype='real' name='Longitude' ordinal='7' />
+                  <column datatype='real' name='Latitude' ordinal='8' />
+                  <column datatype='integer' name='Percent admitted - total' ordinal='9' />
+                  <column datatype='integer' name='Percent admitted - men' ordinal='10' />
+                  <column datatype='integer' name='Percent admitted - women' ordinal='11' />
+                  <column datatype='integer' name='Tuition and fees' ordinal='12' />
+                  <column datatype='string' name='Control of institution' ordinal='13' />
+                  <column datatype='string' name='Historically Black College or University' ordinal='14' />
+                  <column datatype='string' name='Tribal college' ordinal='15' />
+                  <column datatype='string' name='Land Grant Institution' ordinal='16' />
+                  <column datatype='string' name='Carnegie Classification' ordinal='17' />
+                  <column datatype='integer' name='Enrollment - Total' ordinal='18' />
+                  <column datatype='integer' name='Enrollment - Undergraduate' ordinal='19' />
+                  <column datatype='integer' name='Enrollment - Graduate' ordinal='20' />
+                  <column datatype='integer' name='Percent American Indian or Alaska Native' ordinal='21' />
+                  <column datatype='integer' name='Percent Asian' ordinal='22' />
+                  <column datatype='integer' name='Percent Black or African American' ordinal='23' />
+                  <column datatype='integer' name='Percent Hispanic/Latino' ordinal='24' />
+                  <column datatype='integer' name='Percent Native Hawaiian or Other Pacific Islander' ordinal='25' />
+                  <column datatype='integer' name='Percent White' ordinal='26' />
+                  <column datatype='integer' name='Percent Two or more races' ordinal='27' />
+                  <column datatype='integer' name='Percent Race/ethnicity unknown' ordinal='28' />
+                  <column datatype='integer' name='Percent - US Nonresident' ordinal='29' />
+                  <column datatype='integer' name='Percent Asian/Native Hawaiian/Pacific Islander' ordinal='30' />
+                  <column datatype='integer' name='Percent - women' ordinal='31' />
+                  <column datatype='integer' name='Student-to-faculty ratio' ordinal='32' />
+                  <column datatype='integer' name='Percent of first-time undergraduates - in-state' ordinal='33' />
+                  <column datatype='integer' name='Percent of first-time undergraduates - out-of-state' ordinal='34' />
+                  <column datatype='integer' name='Percent of first-time undergraduates - international' ordinal='35' />
+                  <column datatype='integer' name='Percent of first-time undergraduates - residence unknown' ordinal='36' />
+                  <column datatype='integer' name='Number of students receiving an Associate&apos;s degree' ordinal='37' />
+                  <column datatype='integer' name='Number of students receiving a Bachelor&apos;s degree' ordinal='38' />
+                  <column datatype='integer' name='Number of students receiving a Master&apos;s degree' ordinal='39' />
+                  <column datatype='integer' name='Number of students receiving a Doctor&apos;s degree' ordinal='40' />
+                  <column datatype='integer' name='Graduation rate, total cohort' ordinal='41' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <mapsources>
+    <mapsource name='Tableau' />
+  </mapsources>
+  <worksheets>
+    <worksheet name='Sheet 2'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='ipeds (ipeds2022)' name='federated.01x27ky0abclh31213yvj06585e4' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.01x27ky0abclh31213yvj06585e4'>
+            <column datatype='integer' name='[Percent of first-time undergraduates - residence unknown]' role='measure' type='quantitative' />
+            <column datatype='string' name='[State]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+            <column-instance column='[State]' derivation='Attribute' name='[attr:State:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Percent of first-time undergraduates - residence unknown]' derivation='Sum' name='[sum:Percent of first-time undergraduates - residence unknown:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.01x27ky0abclh31213yvj06585e4].[Longitude (generated)]' field-type='quantitative' max='36977502.349371776' min='-5544157.5808212105' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.01x27ky0abclh31213yvj06585e4].[Latitude (generated)]' field-type='quantitative' max='19782347.313020468' min='-9149915.3346454501' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.01x27ky0abclh31213yvj06585e4].[sum:Percent of first-time undergraduates - residence unknown:qk]' />
+              <lod column='[federated.01x27ky0abclh31213yvj06585e4].[attr:State:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.01x27ky0abclh31213yvj06585e4].[Latitude (generated)]</rows>
+        <cols>[federated.01x27ky0abclh31213yvj06585e4].[Longitude (generated)]</cols>
+      </table>
+      <simple-id uuid='{D2CFC3D6-07FF-44AD-AF86-A86A7BD48263}' />
+    </worksheet>
+  </worksheets>
+  <windows saved-dpi-scale-factor='1.25' source-height='37'>
+    <window class='worksheet' maximized='true' name='Sheet 2'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='compact' param='[Parameters].[Parameter 1]' type='parameter' />
+            <card pane-specification-id='0' param='[federated.01x27ky0abclh31213yvj06585e4].[sum:Percent of first-time undergraduates - residence unknown:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.01x27ky0abclh31213yvj06585e4].[sum:Percent of first-time undergraduates - residence unknown:qk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{5E31EED5-B9C9-4EE7-B54F-D4B3C25166F7}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Sheet 2' width='192'>
+      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
+    </thumbnail>
+  </thumbnails>
+</workbook>
